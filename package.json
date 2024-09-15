@@ -7,7 +7,7 @@
     "start": "bun index.js",
     "dev": "bun src/index.ts",
     "build": "tsup",
-    "publish": "bun run build && biome publish",
+    "publish": "bun run build && npm publish",
     "format": "biome format --write .",
     "lint": "biome lint --write .",
     "check": "biome check --write ."
