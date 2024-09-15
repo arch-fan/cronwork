@@ -15,7 +15,8 @@ program
   .command("start")
   .description("Starts running cronjobs")
   .option("-p, --port <port>", "The port to listen on", "3000")
-  .action(async (_, { port }) => {
+  .action(async (options: { port: string }) => {
+    
     // All app tasks
     const tasks = await loadTasks()
 
@@ -52,8 +53,8 @@ program
     }
 
     // Start express server
-    expressApp.listen(Number(port), () => {
-      logger.info(`Listening on http://localhost:${port}`)
+    expressApp.listen(Number(options.port), () => {
+      logger.info(`Listening on http://localhost:${options.port}`)
     })
   })
 
