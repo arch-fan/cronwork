@@ -24,9 +24,7 @@
     "paths": {
       "@/*": ["src/*"]
     },
-
     "outDir": "dist",
-    "rootDir": "src",
     "declaration": true
   }
 }
