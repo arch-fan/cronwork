@@ -5,7 +5,7 @@ export const loadTasks = async (): Promise<Task[]> => {
   const tasks: Task[] = []
 
   const files = await globby(
-    ["src/cronjobs/*.{ts,js}", "src/cronjobs/*/*.{ts,js}"],
+    ["src/cronjobs/*.{ts,js}", "src/cronjobs/*/index.{ts,js}"],
     {
       absolute: true,
     },
