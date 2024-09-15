@@ -52,7 +52,7 @@ program
     }
 
     // Start express server
-    expressApp.listen(port, () => {
+    expressApp.listen(Number(port), () => {
       logger.info(`Listening on http://localhost:${port}`)
     })
   })
